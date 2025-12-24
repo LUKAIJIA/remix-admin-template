@@ -1,10 +1,9 @@
 [build]
-command = "npm run build"
-publish = "build/client"
+  # 将命令改为 hugo
+  command = "hugo --gc --minify"
+  # 将发布目录改为 public
+  publish = "public"
 
-[dev]
-command = "npm run dev"
-framework = "vite"
-
-[template]
-required-extensions = ["supabase"]
+# 以下部分可以全部删除或保留，不影响核心构建
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
